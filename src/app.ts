@@ -36,11 +36,6 @@ app.post('/balance/:userId', validateProvider, async (request: Request, response
 
         const balanceData = await provider.getBalance(userId) as BalanceResponse;
 
-        // const balanceResponse = {
-        //     userId,
-        //     ...balanceData
-        // };
-
         response.json({
             success: true,
             data: balanceData
